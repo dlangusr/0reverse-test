@@ -1,18 +1,19 @@
 package com.example;
 
-import net.jqwik.api.*;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.junit.Test;
+
 import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 
 public class ReverseTest {
 
-    @Example
-    void reversesEvenLengthList() {
+    @Test
+    public void reversesEvenLengthList() {
         List<Integer> list =
                 new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 
@@ -21,8 +22,8 @@ public class ReverseTest {
         assertEquals(Arrays.asList(4, 3, 2, 1), list);
     }
 
-    @Example
-    void reversesOddLengthList() {
+    @Test
+    public void reversesOddLengthList() {
         List<Integer> list =
                 new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
 
@@ -31,8 +32,8 @@ public class ReverseTest {
         assertEquals(Arrays.asList(5, 4, 3, 2, 1), list);
     }
 
-    @Example
-    void reversesStringList() {
+    @Test
+    public void reversesStringList() {
         List<String> list =
                 new ArrayList<>(Arrays.asList("A", "B", "C"));
 
@@ -41,8 +42,8 @@ public class ReverseTest {
         assertEquals(Arrays.asList("C", "B", "A"), list);
     }
 
-    @Example
-    void emptyListRemainsEmpty() {
+    @Test
+    public void emptyListRemainsEmpty() {
         List<Integer> list = new ArrayList<>();
 
         Reverse.reverse(list);
@@ -50,8 +51,8 @@ public class ReverseTest {
         assertEquals(Collections.emptyList(), list);
     }
 
-    @Example
-    void singleElementListRemainsUnchanged() {
+    @Test
+    public void singleElementListRemainsUnchanged() {
         List<Integer> list =
                 new ArrayList<>(Arrays.asList(42));
 
