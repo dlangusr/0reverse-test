@@ -2,19 +2,16 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import net.jqwik.api.Example;
-
-import java.util.Collections;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class ReverseTest {
 
-    @Example
+    @Test
     public void reversesEvenLengthList() {
         List<Integer> list =
                 new ArrayList<>(Arrays.asList(1, 2, 3, 4));
